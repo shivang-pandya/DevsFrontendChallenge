@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #012a4a, #013a63);
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* General Navbar Styling */
+#main-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+#main-header h1 {
+    font-size: 1.8rem;
+    color: #ffcb74;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+
+#main-nav a:hover {
+    color: #ffcb74;
+}
+
+/* Responsive Navbar Styling */
+#main-header {
+    position: relative;
+}
+
+#main-nav {
+    position: relative;
+}
+
+
+
+
+/* Timer Box in Navbar */
+#countdown-box {
+    background-color: rgba(255, 203, 116, 0.8);
+    color: #001f3f;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Section & h2 Styles */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: slideIn 1s ease;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px; 
+    color: #ffcb74;
+}
+
+/* Footer */
+#main-footer {
+    background: linear-gradient(to right, #001f3f, #012a4a);
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-footer p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#main-footer a {
+    color: #ffcb74;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+#main-footer a:hover {
+    color: white;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Snowflake Animation */
+#snowflake-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10%);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcb74;
+    color: #001f3f;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: none;
+}
+
+#back-to-top:hover {
+    transform: scale(1.2);
+}
